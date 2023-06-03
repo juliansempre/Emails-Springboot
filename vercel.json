@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "target/*.jar",
+      "use": "@vercel/java"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "target/$1.jar",
+      "headers": {
+        "Content-Type": "application/java-archive"
+      }
+    }
+  ],
+  "build": {
+    "env": {
+      "MY_CUSTOM_ENV": "my-value"
+    }
+  }
+}

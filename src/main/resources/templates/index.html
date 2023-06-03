@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <title>Enviar email</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+
+<body>
+<form action="/enviar-email" method="get">
+    <label class="label1">Enviar e-mail com SpringBoot:</label>
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" required><br><br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br><br>
+    <label for="destino">Destino:</label>
+    <input type="email" id="destino" name="destino" required><br><br>
+    <label for="mensagem">Mensagem:</label><br>
+    <textarea id="mensagem" name="mensagem" rows="4" cols="50" required></textarea><br><br>
+    <input type="submit" value="Enviar">
+    <button type="button" onclick="limpar()">Limpar</button>
+</form>
+    
+<script type="text/javascript" src="/js/main.js"></script>
+</body>
+</html>
