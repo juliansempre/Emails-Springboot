@@ -2,22 +2,11 @@
   "version": 2,
   "builds": [
     {
-      "src": "iniciar/*.jar",
-      "use": "@vercel/java"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "iniciar/$1.jar",
-      "headers": {
-        "Content-Type": "application/java-archive"
+      "src": "pom.xml",
+      "use": "@vercel/maven",
+      "config": {
+        "mavenCommand": "package"
       }
     }
-  ],
-  "build": {
-    "env": {
-      "MY_CUSTOM_ENV": "my-value"
-    }
-  }
+  ]
 }
