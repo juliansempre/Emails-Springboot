@@ -2,14 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "target/*.jar",
+      "src": "iniciar/*.jar",
       "use": "@vercel/java"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "target/$1.jar",
+      "dest": "iniciar/$1.jar",
       "headers": {
         "Content-Type": "application/java-archive"
       }
