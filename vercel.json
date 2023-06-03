@@ -1,13 +1,15 @@
 {
-  "name": "my-heroku-app",
   "version": 2,
   "builds": [
     {
-      "src": ".",
+      "src": "iniciar/enviaremail.jar",
       "use": "@vercel/static-build"
     }
-  ],
-  "env": {
-    "MY_ENV_VAR": "my-value"
-  }
+  ], 
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "iniciar/enviaremail.jar"
+    }
+  ]
 }
